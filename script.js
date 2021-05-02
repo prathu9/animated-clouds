@@ -7,10 +7,10 @@ ctx.canvas.height = window.innerHeight;
 let particlesArray = [];
 
 const colors = [
-    'white',
-    'rgba(255,255,255,0.3)',
-    'rgba(173,216,230,0.8)',
-    'rgba(211,211,211,0.8)'
+    '#000',
+    // 'rgba(255,255,255,0.3)',
+    // 'rgba(173,216,230,0.8)',
+    // 'rgba(211,211,211,0.8)'
 ];
 
 const maxSize = 40;
@@ -53,6 +53,8 @@ Particles.prototype.draw = function(){
     ctx.arc(this.x, this.y, this.size, 0, Math.PI*2, false);
     ctx.fillStyle = this.color;
     ctx.fill();
+    ctx.strokeStyle = "#fff";
+    ctx.stroke();
 } 
 
 //add update method to particle prototype
@@ -78,7 +80,7 @@ Particles.prototype.update = function(){
             }
     }
     else if(this.size > minSize){
-        this.size -= 0.1            
+        this.size -= 0.5            
     }
 
     if(this.size < 0){
