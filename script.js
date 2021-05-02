@@ -18,8 +18,8 @@ const minSize = 0;
 const mouseRadius = 60;
 
 const mouse = {
-    x:null,
-    y:null
+    x:undefined,
+    y:undefined
 }
 
 window.addEventListener("mousemove", (event) => {
